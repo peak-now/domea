@@ -9,7 +9,7 @@
                 <img src="https://www.domea.dk/static/media/domea_logo.svg" />
             </div>
             <div class="c-header__right">
-                <button v-if="theCustomer" class="c-bttn c-bttn--blue" onclick="window.open('https://etray.cbb.dk/kaldslogning', '_blank');">Opret ny log</button>
+                <button v-if="theCustomer" class="c-bttn c-bttn--blue" onclick="window.open('', '_blank');">Opret ny log</button>
                 <transition name="fadeInTop">
                     <div v-show="user"
                         :class="{'hint--bottom hint--always hint--error': theCustomerPhoneNumberHasError}"
@@ -17,17 +17,17 @@
                         <div class="input-with-button"
                             :class="{'input-with-button--error': theCustomerPhoneNumberHasError}">
                             <input type="text" class="input-with-button__input" v-model="theCustomerPhoneNumber"
-                                ref="customer_number_input" placeholder="Indtast mobilnummer"
+                                ref="customer_number_input" placeholder="Indtast lejemålsnummer"
                                 @keyup="theCustomerPhoneNumberHasError = false" @keydown.enter="readCustomer" />
                             <button class="input-with-button__button c-bttn c-bttn--primary"
                                 :class="{'c-bttn--loading': isTheCustomerLoading}" @click="readCustomer">
-                                <template v-if="!isTheCustomerLoading">Søg efter kunde</template>
+                                <template v-if="!isTheCustomerLoading">Søg efter lejer</template>
                             </button>
                         </div>
                 </transition>
                 <transition name="fadeIn">
                     <div class="c-header__right__hint" v-if="user && !theCustomer && !isTheCustomerLoading">
-                        <h4>Start med at søge efter en kunde</h4>
+                        <h4>Start med at søge efter en lejer via lejemålsnummer</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
                             text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
                             clip-rule="evenodd" viewBox="0 0 415 512.572">
@@ -61,7 +61,7 @@
                                 <li>{{ theCustomer.CUSTOMER_ADDRESS }}</li>
                                 <li>{{ theCustomer.CUSTOMER_ZIP }} {{ theCustomer.CUSTOMER_CITY }}</li>
                             </ul>
-                            <h4 class="text-explainer c-customer--not-found" v-else>Kunden er ikke fundet</h4>
+                            <h4 class="text-explainer c-customer--not-found" v-else>Lejer er ikke fundet</h4>
                             <ul>
                                 <li><label class="c-label">Mobilnummer</label>{{ theCustomer.vPhone }}</li>
                                 <li><label class="c-label">Email</label>
@@ -80,19 +80,19 @@
                     <div class="c-card__body pad-1">
                         <div class="c-buttons">
                             <button class="c-bttn c-bttn--blue" @click="openCreateCaseFor2ndLine">
-                                Opret sag til BackOffice
+                                Opret sag til Domea.dk kundeservice
                             </button>
                             <button class="c-bttn c-bttn--blue" @click="openIsMessageModal">
-                                Send mail til kunde
+                                Send mail til lejer
                             </button>
-                            <button class="c-bttn c-bttn--blue" @click="openWebVictor">
-                                Åben kunde i Web Victor
+                            <button class="c-bttn c-bttn--blue" @click="openIsMessageModal">
+                                Send sms til lejer
                             </button>
-                            <button class="c-bttn c-bttn--blue" @click="openActiveOffers">
-                                Se åbne tilbud på kunden
+                            <button class="c-bttn c-bttn--blue" @click="TBD">
+                                TBD
                             </button>
-                            <button class="c-bttn c-bttn--blue" @click="openClosedOffers">
-                                Se lukket tilbud på kunden
+                            <button class="c-bttn c-bttn--blue" @click="TBD">
+                                TBD
                             </button>
                         </div>
                     </div>
@@ -534,7 +534,7 @@
 <div class="c-modal c-modal--etray js-c-modal c-modal--hidden">
     <div class="c-modal__content">
         <div class="c-modal__content__header">
-            <h4>Opret sag til BackOffice</h4>
+            <h4>Opret sag til domea.dk kundeservice</h4>
             <div class="bg-icon-hover js-close-c-modal" onclick="closeCreateCase(event)">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
