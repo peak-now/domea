@@ -73,8 +73,8 @@ $(document).one('trigger::vue_init', function () {
                 showRelatedLogs: {},
                 validationButtonArr: [
                     { val: 'Juridisk Ejer', tooltip: 'Juridisk Ejer valideret' },
-                    { val: '3 pkt. val', tooltip: '3 pkt. valideling' },
-                    { val: 'Ingen val', tooltip: 'Kunden kunne/skulle ikke valideres' }
+                    { val: '3 pkt. valideret', tooltip: '3 pkt. valideling' },
+                    { val: 'Ingen validering', tooltip: 'Lejer kunne/skulle ikke valideres' }
                 ],
                 seletedValidation: '',
                 isRemeberValidationTypeAnimate: false,
