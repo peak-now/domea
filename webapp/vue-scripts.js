@@ -725,7 +725,7 @@ $(document).one('trigger::vue_init', function () {
                     $('.logMsg').removeClass('logMsgMissing')
                 },
                 readCustomer() {
-                    if (this.theCustomerPhoneNumber.length !== 8) {
+                    if (this.theCustomerPhoneNumber.length > 8) {
                         this.theCustomerPhoneNumberHasError = true
                         this.$refs.customer_number_input.focus()
                         return

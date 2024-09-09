@@ -27,7 +27,7 @@
                 </transition>
                 <transition name="fadeIn">
                     <div class="c-header__right__hint" v-if="user && !theCustomer && !isTheCustomerLoading">
-                        <h4>Start med at søge efter en lejer via lejemålsnummer</h4>
+                        <h4>Start med at søge efter en lejer</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
                             text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
                             clip-rule="evenodd" viewBox="0 0 415 512.572">
@@ -52,7 +52,7 @@
             <div class="c-grid__col c-grid__col__sidebar">
                 <div class="c-card">
                     <div class="c-card__header">
-                        <h4>Kunde</h4>
+                        <h4>Lejer</h4>
                     </div>
                     <div class="c-card__body pad-1">
                         <div class="the-customer" v-if="theCustomer">
@@ -85,13 +85,13 @@
                             <button class="c-bttn c-bttn--blue" @click="openIsMessageModal">
                                 Send mail til lejer
                             </button>
-                            <button class="c-bttn c-bttn--blue" @click="openIsMessageModal">
+                            <button class="c-bttn c-bttn--blue" @click="openWebVictor">
                                 Send sms til lejer
                             </button>
-                            <button class="c-bttn c-bttn--blue" @click="TBD">
+                            <button class="c-bttn c-bttn--blue" @click="openActiveOffers">
                                 TBD
                             </button>
-                            <button class="c-bttn c-bttn--blue" @click="TBD">
+                            <button class="c-bttn c-bttn--blue" @click="openClosedOffers">
                                 TBD
                             </button>
                         </div>
@@ -151,7 +151,7 @@
                                 </div>
                                     <div class="c-input-group">
                                         <label class="c-label">Uddyb henvendelse og beskriv hvad du har aftalt med
-                                            kunden</label>
+                                            lejer</label>
                                         <textarea class="logMsg" v-model="selectedMessage" ref="new_log_message" rows="4"
                                             @keydown="onNewLogTextareaKeyUp($event)" cols="50"></textarea>
                                     </div>
@@ -534,7 +534,7 @@
 <div class="c-modal c-modal--etray js-c-modal c-modal--hidden">
     <div class="c-modal__content">
         <div class="c-modal__content__header">
-            <h4>Opret sag til domea.dk kundeservice</h4>
+            <h4>Opret sag til BackOffice</h4>
             <div class="bg-icon-hover js-close-c-modal" onclick="closeCreateCase(event)">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
