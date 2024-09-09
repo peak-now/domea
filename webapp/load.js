@@ -1,6 +1,6 @@
 var random_id = new Date().valueOf();
 if (version.length > 0)
-  {var external_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea@' + version + '/webapp'}
+  {var external_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea@' + version + '/webapp/'}
 else
   {var external_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea@' + 'latest' + '/webapp/'}
 var purge_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea/'
