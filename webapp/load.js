@@ -1,9 +1,9 @@
 var random_id = new Date().valueOf();
 if (version.length > 0)
-  {var external_path = 'https://cdn.jsdelivr.net/gh/sorenaakjaer/Dialog-@' + version + '/'}
+  {var external_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea@' + version + '/webapp'}
 else
-  {var external_path = 'https://cdn.jsdelivr.net/gh/sorenaakjaer/Dialog-@' + 'latest' + '/'}
-var purge_path = 'https://cdn.jsdelivr.net/gh/sorenaakjaer/Dialog-/'
+  {var external_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea@' + 'latest' + '/webapp/'}
+var purge_path = 'https://cdn.jsdelivr.net/gh/peak-now/domea/'
 var v_style1 = external_path + 'base-cbb.css' + '?' + random_id;
 var v_style2 = external_path + 'style.css' + '?' + random_id;
 var v_js1 = external_path + 'js-scripts.js'; //+ '?' + random_id;
