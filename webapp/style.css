@@ -1265,7 +1265,7 @@ select {
     left: 0;
     right: 0;
     height: 100vh;
-    background: linear-gradient(2deg, #ffecbf 0, #fce095 34%, #fcd269 100%);
+    background: linear-gradient(2deg, #fff 0, #fff 34%, #335057 100%);
     z-index: 999999999;
     display: flex;
     align-items: center;

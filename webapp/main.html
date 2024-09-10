@@ -85,13 +85,10 @@
                                 Opret sag til kundeservice
                             </button>
                             <button class="c-bttn c-bttn--blue" @click="openIsMessageModal">
-                                Send mail til lejer
-                            </button>
-                            <button class="c-bttn c-bttn--blue" @click="openWebVictor">
-                                Send sms til lejer
+                                Send besked til lejer
                             </button>
                             <button class="c-bttn c-bttn--blue" @click="openActiveOffers">
-                                TBD
+                                Servicecenter processer
                             </button>
                             <button class="c-bttn c-bttn--blue" @click="openClosedOffers">
                                 TBD
@@ -416,11 +413,11 @@
                             @click="setActiveMessageType('email')">
                             Email
                         </div>
-                        <!--<div class="c-button c-filters__filter"
+                        <div class="c-button c-filters__filter"
                             :class="{'c-filters__filter--active': activeMessageType === 'sms'}"
                             @click="setActiveMessageType('sms')">
                             SMS
-                        </div>-->
+                        </div>
                     </div>
                     <form class="c-send-message__form" @submit.prevent>
                         <div class="c-input-group">
